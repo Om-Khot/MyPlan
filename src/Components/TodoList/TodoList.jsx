@@ -2,6 +2,7 @@ import { useContext } from "react";
 import TodoContext from "../../Context/todoContext";
 import dispatchContext from "../../Context/dispatchContext";
 import Todo from "../ToDo/Todo";
+import './TodoList.css';
 
 function TodoList(){
     const {list} = useContext(TodoContext);
@@ -15,7 +16,7 @@ function TodoList(){
         dispatch({type: 'edit_Todo', payload: {todo: t,editText: newText}});
     }
     return(
-        <div>
+        <div className="ListItem">
             {list.length > 0 && list.map(t=> <Todo
                                                 key={t.id}
                                                 isFinished = {t.finished}

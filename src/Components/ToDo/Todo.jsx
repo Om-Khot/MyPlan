@@ -12,21 +12,23 @@ function Todo({name,type,onDelete,onEdit}){
 
            <input type="checkbox" className='todocheckbox'/>
            <div className='todoContent'> 
-                <div>
+                <div >
                     {(isEditing) ? <input type='text' value={editText} onChange={e=> setEditText(e.target.value)}/> : name}
                 </div>
-                <div> {type} </div>
+                <div className='todoBolck_type'> {type} </div>
            </div>
            <div className='todoBtns'>
 
-                <button onClick={()=>{
+                <button
+                    className='editbtn'
+                    onClick={()=>{
                     setIsEditing(!isEditing);
                     onEdit(editText);
                 }}> 
                     {(!isEditing) ? "Edit" : "Save"}
                 </button>
 
-                <button onClick={onDelete}>Delete</button>
+                <button className="deletebtn"onClick={onDelete}>Delete</button>
            </div>          
             
         </div>

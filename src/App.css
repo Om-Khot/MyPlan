@@ -1,0 +1,9 @@
+.Header{
+    font-family: cursive;
+    color: rgb(68, 23, 109);
+}
+
+.HomePage{
+    margin-left: 5px;
+    display: flex;
+}

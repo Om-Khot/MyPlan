@@ -1,13 +1,13 @@
 import { useContext, useState } from "react";
 import dispatchContext from "../../Context/dispatchContext";
-
+import './Addtodo.css';
 function AddTodo(){
 
     const [inputText,setInputText] = useState('');
     const [inputTextType,setInputTextType] = useState('');
     const {dispatch} = useContext(dispatchContext);
     return(
-        <div>
+        <div className="AddTodoBlock">
             <input
                 type="text"
                 placeholder = "Add new task here" 

@@ -9,14 +9,17 @@ function App() {
   
   const [list, dispatch] = useReducer(TodoReducer,[]);
   return (
+      <div className='HomePage'>
+          <TodoContext.Provider value = {{list}}>
+          <dispatchContext.Provider value= {{dispatch}}>
+              <h1 className='Header'>MyPlan</h1>
+              <hr></hr>
+              <AddTodo/>
+              <TodoList/>
+          </dispatchContext.Provider>        
+        </TodoContext.Provider>
+      </div>
       
-      <TodoContext.Provider value = {{list}}>
-        <dispatchContext.Provider value= {{dispatch}}>
-            <h1>MyPlan | Make your day planable</h1>
-            <AddTodo/>
-            <TodoList/>
-        </dispatchContext.Provider>        
-      </TodoContext.Provider>
   )
 }
 
