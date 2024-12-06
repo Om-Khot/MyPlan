@@ -22,9 +22,15 @@ function AddTodo(){
             />
             <button
                 onClick={()=>{
-                    dispatch({type: 'add_Todo',payload:{name: inputText, type: inputTextType}});
-                    setInputText('');
-                    setInputTextType('');
+                    if(inputText == ''){
+                        alert("Please Enter Valid Task");
+                    }
+                    else{
+                        dispatch({type: 'add_Todo',payload:{name: inputText, type: inputTextType}});
+                        setInputText('');
+                        setInputTextType('');
+                    }
+                    
                 }}
             >
                 Add Task
