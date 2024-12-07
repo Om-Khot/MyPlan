@@ -27,3 +27,29 @@
     background: #555;
     height: 10px;
   }
+
+.filterBtnsContainer{
+  width: 60%;
+  margin: 2px auto;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-around;
+  /* background-color: aliceblue; */
+}
+
+.filterBtnsContainer button{
+  cursor: pointer;
+  padding: 10px 15px;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+}
+.filterBtnsContainer button:nth-child(1){
+  background-color: #ffd700;
+}
+.filterBtnsContainer button:nth-child(2){
+  background-color: #f59e0b;
+}
+.filterBtnsContainer button:nth-child(3){
+  background-color: #32cd33;
+}

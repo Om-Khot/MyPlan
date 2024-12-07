@@ -1,16 +1,15 @@
 import { useState } from 'react';
 import './Todo.css'
 
-function Todo({name,type,onDelete,onEdit}){
+function Todo({name,type,complete,onDelete,onEdit,onDone}){
 
     const [isEditing,setIsEditing] = useState(false);
     const [editText,setEditText] = useState(name);
-
-
+    
     return (
         <div className="todoBlock">
 
-           <input type="checkbox" className='todocheckbox'/>
+           <input type="checkbox" checked={complete} onChange={(e)=> console.log(e)} className='todocheckbox'/>
            <div className='todoContent'> 
                 <div >
                     {(isEditing) ? <input type='text' value={editText} onChange={e=> setEditText(e.target.value)}/> : name}
@@ -29,6 +28,10 @@ function Todo({name,type,onDelete,onEdit}){
                 </button>
 
                 <button className="deletebtn"onClick={onDelete}>Delete</button>
+
+                <button className='donebtn' onClick={onDone}>
+                {!(complete) ? "Done It" : "Not Done"}
+                </button>
            </div>          
             
         </div>

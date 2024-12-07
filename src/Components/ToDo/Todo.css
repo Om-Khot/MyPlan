@@ -12,7 +12,7 @@
 }
 
 .todoContent{
-    width:70%; 
+    width:60%; 
 }
 .todoContent div:nth-child(1){
     font-size: x-large;
@@ -23,12 +23,14 @@
     text-transform: capitalize;
 }
 .todoBtns button{
+    border: 0.3px solid grey;
     border-radius: 5px;
     padding: 2px 10px;
     margin-left: 10px;
     
     font-size: 15px;
     cursor: pointer;
+    
 }
 .editbtn{
     background-color: #facc15;
@@ -36,4 +38,7 @@
 .deletebtn{
     color: white;
     background-color: #ef4444;
+}
+.donebtn{
+    background-color: #facc15;
 }

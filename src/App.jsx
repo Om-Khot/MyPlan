@@ -1,4 +1,4 @@
-import { useReducer } from 'react'
+import { useReducer, useState } from 'react'
 import './App.css'
 import TodoContext from './Context/todoContext';
 import dispatchContext from './Context/dispatchContext';
@@ -8,14 +8,24 @@ import AddTodo from './Components/AddToDo/Addtodo';
 function App() {
   
   const [list, dispatch] = useReducer(TodoReducer,[]);
+  
   return (
       <div className='HomePage'>
-          <TodoContext.Provider value = {{list}}>
+          <TodoContext.Provider value = {{list}}>          
           <dispatchContext.Provider value= {{dispatch}}>
+          
+            <div>
               <h1 className='Header'>MyPlan</h1>
               <hr></hr>
+            </div>
+            <hr></hr>
+            <div>
               <AddTodo/>
-              <TodoList/>
+            </div>
+            <div>
+            <TodoList/>
+            </div>            
+            
           </dispatchContext.Provider>        
         </TodoContext.Provider>
       </div>
