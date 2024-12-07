@@ -3,7 +3,7 @@ import TodoContext from "../../Context/todoContext";
 import dispatchContext from "../../Context/dispatchContext";
 import Todo from "../ToDo/Todo";
 import './TodoList.css';
-
+ 
 function TodoList(){
     const {list} = useContext(TodoContext);
     const {dispatch} = useContext(dispatchContext);

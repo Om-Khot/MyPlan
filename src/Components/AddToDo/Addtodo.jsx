@@ -9,7 +9,7 @@ function AddTodo(){
     return(
         <div className="AddTodoBlock">
             <input
-                type="text"
+                type="text" 
                 placeholder = "Add new task here" 
                 value={inputText}
                 onChange={e=> setInputText(e.target.value)}         

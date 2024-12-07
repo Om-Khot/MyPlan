@@ -1,4 +1,7 @@
 function TodoReducer(state,action){
+
+    if (!Array.isArray(state)) state = [];
+
     if(action.type == 'add_Todo'){
         let todoName = action.payload.name;
         let Type = action.payload.type;
